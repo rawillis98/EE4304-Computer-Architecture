@@ -1,0 +1,36 @@
+Running: /proj/cad/xilinx_14.7/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/eng/r/raw160130/EE4304-Computer-Architecture/Lab-2/Project-2/TopLevel_tb_isim_beh.exe -prj /home/eng/r/raw160130/EE4304-Computer-Architecture/Lab-2/Project-2/TopLevel_tb_beh.prj work.TopLevel_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 16
+Turning on mult-threading, number of parallel sub-compilation jobs: 32 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/eng/r/raw160130/EE4304-Computer-Architecture/Lab-2/Project-2/../TopLevel_tb.v" into library work
+WARNING:HDLCompiler:248 - "/home/eng/r/raw160130/EE4304-Computer-Architecture/Lab-2/Project-2/../RegFile.v" Line 30: Block identifier is required on this block
+Analyzing Verilog file "/proj/cad/xilinx_14.7/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 95232 KB
+Fuse CPU Usage: 2790 ms
+Compiling module PC
+Compiling module InstructionMemory
+Compiling module Decoder
+Compiling module Register
+Compiling module RegFile_default
+Compiling module mux(N=5)
+Compiling module mux
+Compiling module SignExtend
+Compiling module ALU
+Compiling module DataMemory
+Compiling module sll
+Compiling module sll(inSize=26,outSize=28)
+Compiling module Control
+Compiling module ALUControl
+Compiling module TopLevel
+Compiling module TopLevel_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 17 Verilog Units
+Built simulation executable /home/eng/r/raw160130/EE4304-Computer-Architecture/Lab-2/Project-2/TopLevel_tb_isim_beh.exe
+Fuse Memory Usage: 2226224 KB
+Fuse CPU Usage: 3160 ms
+GCC CPU Usage: 1490 ms

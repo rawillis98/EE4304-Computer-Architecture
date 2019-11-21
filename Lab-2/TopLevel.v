@@ -16,6 +16,9 @@ module TopLevel(clk, rst, test_reg);
 	input wire clk;
 	input wire rst;
 
+	wire [1:0] aluOpWire;
+	wire [5:0] opCodeWire;
+
 	reg [WORD - 1:0] PCin;
 	wire [WORD - 1:0] PCout;
 
@@ -152,22 +155,22 @@ module TopLevel(clk, rst, test_reg);
 
 	
 	Control CPUControl(
-			.instruction(), //blank
+			.instruction(iMemOut[31:26]), //blank
 			.regWrite(regWrite),
 			.regDst(regDst),
 			.aluSrc(aluSrc),
 			.memWrite(dMemWrite),
 			.memRead(dMemRead),
 			.memToReg(memToReg),
-			.aluOp(), //blank
+			.aluOp(aluOpWire), //blank
 			.jump(jump),
 			.branch(branchCtr)
 		);
 
 	ALUControl ALUControl(
-			.aluOp(), //blank
-			.opCode(), //blank
-			.func(), //blank
+			.aluOp(aluOpWire), //blank
+			.opCode(iMemOut[31:26]), //blank
+			.func(iMemOut[5:0]), //blank
 			.aluFunc(aluFunc)
 		);
 
