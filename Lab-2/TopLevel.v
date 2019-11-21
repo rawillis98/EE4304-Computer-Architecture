@@ -17,7 +17,6 @@ module TopLevel(clk, rst, test_reg);
 	input wire rst;
 
 	wire [1:0] aluOpWire;
-	wire [5:0] opCodeWire;
 
 	reg [WORD - 1:0] PCin;
 	wire [WORD - 1:0] PCout;
